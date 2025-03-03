@@ -23,7 +23,7 @@ document.getElementById("btnadd").addEventListener("click",
                  
                 const container = document.getElementById("tranhis");
                 const div = document.createElement("div");
-                div.innerHTML=`<h1 class="bg-slate-100 p-2" mt-3>added <span class="font-bold">${amount} </span> from <span class="font-bold">${account}</span> account</h1>`;
+                div.innerHTML=`<h1 class="bg-slate-100 p-2" mt-3>added <span class="font-bold">${amount} </span> to <span class="font-bold">${account}</span> account</h1>`;
                 container.appendChild(div);
                 
                 
