@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+    <header>
+        <nav class="flex justify-around items-center">
+            <img class="w-16" src="./Payoo-MFS-Resources-main/assets/Group.png" alt="">
+            <div>
+                <h1 class="text-3xl font-bold">$ <span id="main-balance">4500</span></h1>
+                <p>Available Balance</p>
+            </div>   
+            <button class="btn">Logout</button>
+        </nav>
+        <section class="mt-10">
+            <h1 class="text-2xl font-bold">Welcome to Payoo!</h1>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
+                <div id="add-money" class="box cursor-pointer border border-solid border-black p-4 text-center rounded-lg">
+                    <img class="w-8 mx-auto" src="./Payoo-MFS-Resources-main/assets/wallet1.png" alt="">
+                    <h3>Add Money</h3>
+                </div>
+                <div id="cash-out" class="box cursor-pointer border border-solid border-black p-4 text-center rounded-lg ">
+                    <img class="w-8 mx-auto" src="./Payoo-MFS-Resources-main/assets/send1.png" alt="">
+                    <h3>Cash Out</h3>
+                </div>
+                <div class="box cursor-pointer border border-solid border-black p-4 text-center rounded-lg">
+                    <img class="w-8 mx-auto" src="./Payoo-MFS-Resources-main/assets/purse1.png" alt="">
+                    <h3>Pay Bill</h3>
+                </div>
+                <div class="box cursor-pointer border border-solid border-black p-4 text-center rounded-lg ">
+                    <img class="w-8 mx-auto" src="./Payoo-MFS-Resources-main/assets/money1.png" alt="">
+                    <h3>Transfer Money</h3>
+                </div>
+                <div class="box cursor-pointer border border-solid border-black p-4 text-center rounded-lg  ">
+                    <img class="w-8 mx-auto" src="./Payoo-MFS-Resources-main/assets/bonus1.png" alt="">
+                    <h3>Get Bonus</h3>
+                </div>
+                <div id="transaction1" class="box cursor-pointer border border-solid border-black p-4 text-center rounded-lg  ">
+                    <img class="w-8 mx-auto" src="./Payoo-MFS-Resources-main/assets/transaction1.png" alt="">
+                    <h3>Transaction History</h3>
+                </div>
+            </div>
+        </section>
+        <section id="addmoney">
+            <h2>Add Money</h2>
+            <div class="">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  
+                  <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                    
+                    <form class="card-body">
+                        <select class="select select-bordered w-full max-w-xs">
+                            <option disabled selected>Select bank</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="Rocket">Rocket</option>
+                          </select>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Account Number</span>
+                        </label>
+                        <input id="cou" type="number" placeholder="Enter 11 digit account number" value="01764785955" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Amount to Add</span>
+                        </label>
+                        <input id="Amount" type="number" placeholder="Add Amount to Add" class="input input-bordered" required />
+                        <label class="label">
+                          <span class="label-text">Pin Number</span>
+                        </label>
+                        <input value="1234" id="pin" type="number" placeholder="Enter 4-digit pin number" class="input input-bordered" required />
+                        
+                      </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary" id="btnadd">Add Money</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+       <section id="cashout">
+        <h2>Cashout</h2>
+        <form class="card-body">
+            
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Account Number</span>
+            </label>
+            <input id="coun" type="number" placeholder="Enter 11 digit account number" value="01764785955" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">CashOut Amount</span>
+            </label>
+            <input id="cashamount" type="number" placeholder="Add Amount to Cashout" class="input input-bordered" required />
+            <label class="label">
+              <span class="label-text">Pin Number</span>
+            </label>
+            <input value="1234" id="cashpin" type="number" placeholder="Enter 4-digit pin number" class="input input-bordered" required />
+            
+          </div>
+          <div class="form-control mt-6">
+            <button class="btn btn-primary" id="btnCash">CashOut</button>
+          </div>
+        </form>
+       </section>
+      
+       <section id="transaction">
+        <h2>Transaction History</h2>
+        <div id="tranhis">
+
+        </div>
+
+       </section>
+    </header>
+    </section>
+
+
+                    
+      <!-- <script src="./utilities/uti.js"></script>
+      <script src="./scripts/fun.js"></script>               -->
+                  
+    <script src="./scripts/cash.js"></script>
+    <script src="./scripts/toggle.js"></script>
+    <script src="./scripts/fro.js"></script>
+</body>
+</html>
